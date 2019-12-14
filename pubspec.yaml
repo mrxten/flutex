@@ -1,11 +1,8 @@
 name: flutex
-description: A new Flutter package project.
+description: Flutter and Dart extensions
 version: 0.0.1
-author:
-homepage:
-
-environment:
-  sdk: ">=2.1.0 <3.0.0"
+author: Vladislav Zhukov
+homepage: https://github.com/mrxten/flutex
 
 dependencies:
   flutter:
@@ -15,5 +12,6 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-flutter:
-
+environment:
+  sdk: ">=2.6.0 <3.0.0"
+  flutter: ">=1.10.0 <2.0.0"
