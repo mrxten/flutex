@@ -1,7 +1,6 @@
 name: flutex
-description: Flutter and Dart extensions
-version: 0.0.1
-author: Vladislav Zhukov
+description: Flutter and Dart extensions for widgets, iterable and others.
+version: 1.0.1+2
 homepage: https://github.com/mrxten/flutex
 
 dependencies:
