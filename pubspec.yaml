@@ -1,6 +1,6 @@
 name: flutex
-description: Flutter and Dart extensions for widgets, iterable and others.
-version: 1.0.1+2
+description: Flutter widget extensions for functional creating UI.
+version: 1.1.0
 homepage: https://github.com/mrxten/flutex
 
 dependencies:

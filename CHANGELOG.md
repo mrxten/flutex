@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.1.0
+- Remove all non-widget extensions, add some new extensions.
+
 ## 1.0.1+2
 - Small fixes with Visibility, add SafeArea
 

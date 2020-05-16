@@ -2,15 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 extension WidgetExt on Widget {
-  Widget center({
-    Key key,
-  }) {
-    return Center(
-      child: this,
-      key: key,
-    );
-  }
-
   Widget padding({
     @required EdgeInsetsGeometry padding,
     Key key,
@@ -74,6 +65,71 @@ extension WidgetExt on Widget {
     );
   }
 
+  Widget center({
+    Key key,
+  }) {
+    return Center(
+      child: this,
+      key: key,
+    );
+  }
+
+  Widget top({
+    double widthFactor,
+    double heightFactor,
+    Key key,
+  }) {
+    return Align(
+      alignment: Alignment.topCenter,
+      widthFactor: widthFactor,
+      heightFactor: heightFactor,
+      child: this,
+      key: key,
+    );
+  }
+
+  Widget bottom({
+    double widthFactor,
+    double heightFactor,
+    Key key,
+  }) {
+    return Align(
+      alignment: Alignment.bottomCenter,
+      widthFactor: widthFactor,
+      heightFactor: heightFactor,
+      child: this,
+      key: key,
+    );
+  }
+
+  Widget left({
+    double widthFactor,
+    double heightFactor,
+    Key key,
+  }) {
+    return Align(
+      alignment: Alignment.centerLeft,
+      widthFactor: widthFactor,
+      heightFactor: heightFactor,
+      child: this,
+      key: key,
+    );
+  }
+
+  Widget right({
+    double widthFactor,
+    double heightFactor,
+    Key key,
+  }) {
+    return Align(
+      alignment: Alignment.centerRight,
+      widthFactor: widthFactor,
+      heightFactor: heightFactor,
+      child: this,
+      key: key,
+    );
+  }
+
   Widget positioned({
     double left,
     double top,
@@ -101,17 +157,6 @@ extension WidgetExt on Widget {
   }) {
     return RotatedBox(
       quarterTurns: quarterTurns,
-      child: this,
-      key: key,
-    );
-  }
-
-  Widget inkWell(
-    GestureTapCallback onTap, {
-    Key key,
-  }) {
-    return InkWell(
-      onTap: onTap,
       child: this,
       key: key,
     );
@@ -158,6 +203,90 @@ extension WidgetExt on Widget {
       bottom: bottom,
       minimum: minimum,
       maintainBottomViewPadding: maintainBottomViewPadding,
+      key: key,
+    );
+  }
+
+  Widget onTap(
+    GestureTapCallback onTap, {
+    Key key,
+  }) {
+    return GestureDetector(
+      onTap: onTap,
+      child: this,
+      key: key,
+    );
+  }
+
+  Widget inkWell(
+    GestureTapCallback onTap, {
+    Key key,
+  }) {
+    return InkWell(
+      onTap: onTap,
+      child: this,
+      key: key,
+    );
+  }
+
+  Widget materialInkWell(
+    GestureTapCallback onTap, {
+    Color color = Colors.transparent,
+    Key key,
+  }) {
+    return Material(
+      color: color,
+      key: key,
+      child: InkWell(
+        child: this,
+        onTap: onTap,
+      ),
+    );
+  }
+
+  Widget rotate({
+    @required double angle,
+    Offset origin,
+    AlignmentGeometry alignment = Alignment.center,
+    bool transformHitTests = true,
+    Key key,
+  }) {
+    return Transform.rotate(
+      angle: angle,
+      origin: origin,
+      alignment: alignment,
+      transformHitTests: transformHitTests,
+      child: this,
+      key: key,
+    );
+  }
+
+  Widget scale({
+    @required double scale,
+    Offset origin,
+    AlignmentGeometry alignment = Alignment.center,
+    bool transformHitTests = true,
+    Key key,
+  }) {
+    return Transform.scale(
+      scale: scale,
+      origin: origin,
+      alignment: alignment,
+      transformHitTests: transformHitTests,
+      child: this,
+      key: key,
+    );
+  }
+
+  Widget translate({
+    @required Offset offset,
+    bool transformHitTests = true,
+    Key key,
+  }) {
+    return Transform.translate(
+      offset: offset,
+      transformHitTests: transformHitTests,
+      child: this,
       key: key,
     );
   }

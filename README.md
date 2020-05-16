@@ -1,6 +1,6 @@
 # flutex
 
-A new Flutter package project.
+Flutter widget extensions for functional creating UI.
 
 ## Getting Started
 
