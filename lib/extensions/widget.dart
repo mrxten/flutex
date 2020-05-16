@@ -175,6 +175,23 @@ extension WidgetExt on Widget {
     );
   }
 
+  Widget constrainedBox({
+    @required BoxConstraints constraints,
+    Key key,
+  }) {
+    return ConstrainedBox(
+      constraints: constraints,
+      key: key,
+    );
+  }
+
+  Widget expand({Key key}) {
+    return ConstrainedBox(
+      constraints: BoxConstraints.expand(),
+      key: key,
+    );
+  }
+
   Widget visibility({
     bool visible = true,
     Key key,
