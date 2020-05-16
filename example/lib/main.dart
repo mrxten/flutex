@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutex/flutex.dart';
 
@@ -44,13 +46,13 @@ class _MyHomePageState extends State<MyHomePage> {
         children: <Widget>[
           Text(
             'You have pushed the button this many times:',
-          ),
+          ).center().padding(padding: EdgeInsets.all(20.0)),
           Text(
             '$_counter',
-            style: Theme.of(context).textTheme.display1,
-          ),
+            style: Theme.of(context).textTheme.headline1,
+          ).inkWell(() {}).right().rotate(angle: pi / 4),
         ],
-      ).center(),
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
