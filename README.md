@@ -24,7 +24,7 @@ import 'package:flutex/flutex.dart';
 | **.expanded()** | Wrap widget with ```Expanded``` |
 | **.flexible()** | Wrap widget with ```Flexible``` |
 | **.opacity()** | Wrap widget with ```Opacity``` |
-| **.alignv** | Wrap widget with ```Align``` |
+| **.align()** | Wrap widget with ```Align``` |
 | **.center()** | Wrap widget with ```Center``` |
 | **.top()** | Wrap widget with ```Align(alignment: Alignment.topCenter)```|
 | **.bottom()** | Wrap widget with ```Align(alignment: Alignment.bottomCenter)``` |
