@@ -307,4 +307,11 @@ extension WidgetExt on Widget {
       key: key,
     );
   }
+
+  Widget sliverListChild({Key key}) {
+    return SliverList(
+      key: key,
+      delegate: SliverChildListDelegate([this]),
+    );
+  }
 }

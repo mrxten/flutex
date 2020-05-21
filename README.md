@@ -43,6 +43,7 @@ import 'package:flutex/flutex.dart';
 | **.rotate()** | Wrap widget with ```Transform.rotate``` |
 | **.scale()** | Wrap widget with ```Transform.scale``` |
 | **.translate()** | Wrap widget with ```Transform.translate``` |
+| **.sliverListChild()** | Wrap widget with ```SliverList``` includes ```SliverChildListDelegate``` |
 
 
 ## Example
