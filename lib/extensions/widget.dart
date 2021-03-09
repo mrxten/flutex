@@ -3,8 +3,8 @@ import 'package:flutter/widgets.dart';
 
 extension WidgetExt on Widget {
   Widget padding({
-    @required EdgeInsetsGeometry padding,
-    Key key,
+    required EdgeInsetsGeometry padding,
+    Key? key,
   }) {
     return Padding(
       child: this,
@@ -15,7 +15,7 @@ extension WidgetExt on Widget {
 
   Widget expanded({
     int flex = 1,
-    Key key,
+    Key? key,
   }) {
     return Expanded(
       child: this,
@@ -27,7 +27,7 @@ extension WidgetExt on Widget {
   Widget flexible({
     int flex = 1,
     FlexFit fit = FlexFit.loose,
-    Key key,
+    Key? key,
   }) {
     return Flexible(
       flex: flex,
@@ -38,9 +38,9 @@ extension WidgetExt on Widget {
   }
 
   Widget opacity({
-    @required double opacity,
+    required double opacity,
     bool alwaysIncludeSemantics = false,
-    Key key,
+    Key? key,
   }) {
     return Opacity(
       opacity: opacity,
@@ -52,9 +52,9 @@ extension WidgetExt on Widget {
 
   Widget align({
     AlignmentGeometry alignment = Alignment.center,
-    double widthFactor,
-    double heightFactor,
-    Key key,
+    double? widthFactor,
+    double? heightFactor,
+    Key? key,
   }) {
     return Align(
       alignment: alignment,
@@ -66,7 +66,7 @@ extension WidgetExt on Widget {
   }
 
   Widget center({
-    Key key,
+    Key? key,
   }) {
     return Center(
       child: this,
@@ -75,9 +75,9 @@ extension WidgetExt on Widget {
   }
 
   Widget top({
-    double widthFactor,
-    double heightFactor,
-    Key key,
+    double? widthFactor,
+    double? heightFactor,
+    Key? key,
   }) {
     return Align(
       alignment: Alignment.topCenter,
@@ -89,9 +89,9 @@ extension WidgetExt on Widget {
   }
 
   Widget bottom({
-    double widthFactor,
-    double heightFactor,
-    Key key,
+    double? widthFactor,
+    double? heightFactor,
+    Key? key,
   }) {
     return Align(
       alignment: Alignment.bottomCenter,
@@ -103,9 +103,9 @@ extension WidgetExt on Widget {
   }
 
   Widget left({
-    double widthFactor,
-    double heightFactor,
-    Key key,
+    double? widthFactor,
+    double? heightFactor,
+    Key? key,
   }) {
     return Align(
       alignment: Alignment.centerLeft,
@@ -117,9 +117,9 @@ extension WidgetExt on Widget {
   }
 
   Widget right({
-    double widthFactor,
-    double heightFactor,
-    Key key,
+    double? widthFactor,
+    double? heightFactor,
+    Key? key,
   }) {
     return Align(
       alignment: Alignment.centerRight,
@@ -131,13 +131,13 @@ extension WidgetExt on Widget {
   }
 
   Widget positioned({
-    double left,
-    double top,
-    double right,
-    double bottom,
-    double width,
-    double height,
-    Key key,
+    double? left,
+    double? top,
+    double? right,
+    double? bottom,
+    double? width,
+    double? height,
+    Key? key,
   }) {
     return Positioned(
       left: left,
@@ -158,7 +158,7 @@ extension WidgetExt on Widget {
     double bottom = 0.0,
     double width = 0.0,
     double height = 0.0,
-    Key key,
+    Key? key,
   }) {
     return Positioned.fill(
       left: left,
@@ -171,9 +171,9 @@ extension WidgetExt on Widget {
   }
 
   Widget sizedBox({
-    double width,
-    double height,
-    Key key,
+    double? width,
+    double? height,
+    Key? key,
   }) {
     return SizedBox(
       width: width,
@@ -184,8 +184,8 @@ extension WidgetExt on Widget {
   }
 
   Widget constrainedBox({
-    @required BoxConstraints constraints,
-    Key key,
+    required BoxConstraints constraints,
+    Key? key,
   }) {
     return ConstrainedBox(
       constraints: constraints,
@@ -193,7 +193,7 @@ extension WidgetExt on Widget {
     );
   }
 
-  Widget expand({Key key}) {
+  Widget expand({Key? key}) {
     return ConstrainedBox(
       constraints: BoxConstraints.expand(),
       key: key,
@@ -202,7 +202,7 @@ extension WidgetExt on Widget {
 
   Widget visibility({
     bool visible = true,
-    Key key,
+    Key? key,
   }) {
     return Visibility(
       child: this,
@@ -218,7 +218,7 @@ extension WidgetExt on Widget {
     bool bottom = true,
     EdgeInsets minimum = EdgeInsets.zero,
     bool maintainBottomViewPadding = false,
-    Key key,
+    Key? key,
   }) {
     return SafeArea(
       child: this,
@@ -234,8 +234,8 @@ extension WidgetExt on Widget {
 
   Widget onTap(
     GestureTapCallback onTap, {
-    HitTestBehavior behavior,
-    Key key,
+    HitTestBehavior? behavior,
+    Key? key,
   }) {
     return GestureDetector(
       onTap: onTap,
@@ -247,7 +247,7 @@ extension WidgetExt on Widget {
 
   Widget inkWell(
     GestureTapCallback onTap, {
-    Key key,
+    Key? key,
   }) {
     return InkWell(
       onTap: onTap,
@@ -259,7 +259,7 @@ extension WidgetExt on Widget {
   Widget materialInkWell(
     GestureTapCallback onTap, {
     Color color = Colors.transparent,
-    Key key,
+    Key? key,
   }) {
     return Material(
       color: color,
@@ -272,11 +272,11 @@ extension WidgetExt on Widget {
   }
 
   Widget rotate({
-    @required double angle,
-    Offset origin,
-    AlignmentGeometry alignment = Alignment.center,
+    required double angle,
+    Offset? origin,
+    AlignmentGeometry? alignment = Alignment.center,
     bool transformHitTests = true,
-    Key key,
+    Key? key,
   }) {
     return Transform.rotate(
       angle: angle,
@@ -289,11 +289,11 @@ extension WidgetExt on Widget {
   }
 
   Widget scale({
-    @required double scale,
-    Offset origin,
-    AlignmentGeometry alignment = Alignment.center,
+    required double scale,
+    Offset? origin,
+    AlignmentGeometry? alignment = Alignment.center,
     bool transformHitTests = true,
-    Key key,
+    Key? key,
   }) {
     return Transform.scale(
       scale: scale,
@@ -306,9 +306,9 @@ extension WidgetExt on Widget {
   }
 
   Widget translate({
-    @required Offset offset,
+    required Offset offset,
     bool transformHitTests = true,
-    Key key,
+    Key? key,
   }) {
     return Transform.translate(
       offset: offset,
