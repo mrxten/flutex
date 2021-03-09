@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.2
+* Add ```fill``` extension
+* Remove ```sliverListChild``` extension
+* Remove ```rotatedBox``` extension since rarely used
+* Add property ```behavior``` to ```onTap```
+
 ## 1.1.1
 * Add ```sliverListChild``` extension
 

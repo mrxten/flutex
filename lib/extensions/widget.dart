@@ -151,12 +151,20 @@ extension WidgetExt on Widget {
     );
   }
 
-  Widget rotatedBox({
-    @required int quarterTurns,
+  Widget fill({
+    double left = 0.0,
+    double top = 0.0,
+    double right = 0.0,
+    double bottom = 0.0,
+    double width = 0.0,
+    double height = 0.0,
     Key key,
   }) {
-    return RotatedBox(
-      quarterTurns: quarterTurns,
+    return Positioned.fill(
+      left: left,
+      top: top,
+      right: right,
+      bottom: bottom,
       child: this,
       key: key,
     );
@@ -226,10 +234,12 @@ extension WidgetExt on Widget {
 
   Widget onTap(
     GestureTapCallback onTap, {
+    HitTestBehavior behavior,
     Key key,
   }) {
     return GestureDetector(
       onTap: onTap,
+      behavior: behavior,
       child: this,
       key: key,
     );
@@ -305,13 +315,6 @@ extension WidgetExt on Widget {
       transformHitTests: transformHitTests,
       child: this,
       key: key,
-    );
-  }
-
-  Widget sliverListChild({Key key}) {
-    return SliverList(
-      key: key,
-      delegate: SliverChildListDelegate([this]),
     );
   }
 }

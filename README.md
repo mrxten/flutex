@@ -31,7 +31,7 @@ import 'package:flutex/flutex.dart';
 | **.left()** | Wrap widget with ```Align(alignment: Alignment.centerLeft)``` |
 | **.right()** | Wrap widget with ```Align(alignment: Alignment.centerRight)``` |
 | **.positioned()** | Wrap widget with ```Positioned``` |
-| **.rotatedBox()** | Wrap widget with ```RotatedBox``` |
+| **.fill()** | Wrap widget with ```Positioned.fill``` |
 | **.sizedBox()** | Wrap widget with ```SizedBox``` |
 | **.constrainedBox()** | Wrap widget with ```ConstrainedBox``` |
 | **.expand()** | Wrap widget with ```ConstrainedBox(constraints: BoxConstraints.expand())``` |
@@ -43,7 +43,6 @@ import 'package:flutex/flutex.dart';
 | **.rotate()** | Wrap widget with ```Transform.rotate``` |
 | **.scale()** | Wrap widget with ```Transform.scale``` |
 | **.translate()** | Wrap widget with ```Transform.translate``` |
-| **.sliverListChild()** | Wrap widget with ```SliverList``` includes ```SliverChildListDelegate``` |
 
 
 ## Example
